@@ -1,0 +1,77 @@
+h1{
+    color : rgb(6, 165, 165);
+    text-align : center;
+  }
+
+  
+  body{
+    color : blue;
+    background-color : lightgray;
+    width: 80%;
+    margin: 10%;
+    align-content: center;
+  }
+  
+p{
+  color : black;
+}
+
+h2 {
+  color: black;
+  font-weight: 400;
+}
+    
+  
+  
+#DIVperros1, #DIVperros2, #DIVperros3, #DIVperros4 {
+  display: none;
+  width: 100%;
+  padding: 50px 0;
+  background-color: lightblue;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* #DIVperros2 {
+  display: none;
+    width: 100%;
+    padding: 50px 0;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+  #DIVperros3 {
+    display: none;
+      width: 100%;
+      padding: 50px 0;
+      background-color: lightblue;
+      margin-top: 20px;
+}
+#DIVperros4 {
+  display: none;
+    width: 100%;
+    padding: 50px 0;
+    background-color: lightblue;
+    margin-top: 20px;
+} */
+  
+  #DIVgatos1, #DIVgatos2, #DIVgatos3, #DIVgatos4 {
+    display: none;
+    width: 100%;
+    padding: 5% 5%;
+    background-color: lightpink;
+    /* margin-top: 20px; */
+    color: red;
+    align-content: center;  
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  
+  #comienza_div{
+    display:none;
+  }
+
+#main {
+  text-align: center;
+}
+  

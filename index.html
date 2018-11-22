@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trivia</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      
+<!-- <style>
+/* #myDIV {
+    width: 100%;
+    padding: 50px 0;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+#myDIV2 {
+    width: 100%;
+    padding: 50px 0;
+    background-color: lightpink;
+    margin-top: 20px;
+} */
+</style> -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <h1>🐶¡BIENVENID@ a la TRIVIA!🐱<br>
+        "Animales Domésticos"</h1>
+        
+<main id="main">
+    <h2>Esta es una trivia para medir tus conocimientos sobre perros y gatos, si eres amante de los animales estamos segur@s que te irá bien. <br>
+    Si quieres jugar indicanos tu nombre.</h2>
+    <input type="text" id="NOM" placeholder="Nombre"><br><br>
+    <button onclick="save()">Comenzar</button>
+    <div id="comienza_div">
+        <h1 id="nombre_jugador"></h1>
+        
+        <p>ELIGE UNA CATEGORÍA</p> 
+        
+        <button onclick="Gatitos()"> Gatitos</button>
+        <button onclick="Perritos()"> Perritos</button>
+    </div>
+</main>
+        
+
+<div id="DIVperros1">
+    <form name="trivia_perros1">
+        <p>Pregunta: 1/4</p>
+        <p>¿Cúal es la raza de perro considerada la más inteligente? </p>
+        <input type ="radio" id ="mc" name ="question1" value ="Border Collie"> Border Collie
+        <input type ="radio" id ="mc" name ="question1" value ="Poodle"> Poodle
+        <input type ="radio" id ="mc" name ="question1" value ="Pitbull"> Pitbull
+        <input type ="radio" id ="mc" name ="question1" value ="Mastín Napolitano"> Mastín Napolitano<br><br>
+        <button id="perros_siguiente1" type="button" onclick ="perrosSiguiente1()">Siguiente</button>
+    </form>
+</div>
+<div id="DIVperros2">
+    <form name="trivia_perros2">
+        <p>Pregunta: 2/4</p>
+        <p>¿Cúantas porciones de comida deben comer al día? </p>
+        <input type ="radio" id ="mc" name ="question2" value ="3 porciones"> 3 porciones
+        <input type ="radio" id ="mc" name ="question2" value ="5 porciones"> 5 porciones
+        <input type ="radio" id ="mc" name ="question2" value ="2 porciones"> 2 porciones
+        <input type ="radio" id ="mc" name ="question2" value ="1 porcion"> 1 porciones<br> <br>
+        <button id="perros_siguiente2" type="button" onclick ="perrosSiguiente2()">Siguiente</button>
+    </form>    
+</div>
+<div id="DIVperros3">    
+    <form name="trivia_perros3">
+        <p>Pregunta: 3/4</p>
+        <p>¿Cúal de estos alimentos está prohibido para tu fiel amigo? </p>
+        <input type ="radio" id ="mc" name ="question3" value ="Pollo cocido"> Pollo cocido
+        <input type ="radio" id ="mc" name ="question3" value ="Chocolate"> Chocolate
+        <input type ="radio" id ="mc" name ="question3" value ="Brocolí"> Brocolí
+        <input type ="radio" id ="mc" name ="question3" value ="Pelett de perro"> Pellet de perro<br><br>
+        <button id="perros_siguiente3" type="button" onclick ="perrosSiguiente3()">Siguiente</button>
+    </form>
+</div>
+<div id="DIVperros4">
+<form name="trivia_perros4">
+        <p>Pregunta: 4/4</p>
+        <p>Según el record Guinness ¿Cúantos años vivió el perro más longevo?</p>
+        <input type ="radio" id ="mc" name ="question4" value ="1"> 1
+        <input type ="radio" id ="mc" name ="question4" value ="29"> 29
+        <input type ="radio" id ="mc" name ="question4" value ="30"> 30
+        <input type ="radio" id ="mc" name ="question4" value ="Aún no muere"> Aún no muere<br><br>
+        <input id = "button" type = "button" value= "Terminé Guau" onclick = "dog();">
+</form>
+</div>   
+<div id="DIVgatos1">
+    <form name="trivia_gatos1">
+        <p>Pregunta: 1/4</p>
+        <p>¿Cúantas vidas tiene un gato? </p>
+        <input type ="radio" id ="mc" name ="question1" value ="7"> 7
+        <input type ="radio" id ="mc" name ="question1" value ="Son inmortales"> Son inmortales
+        <input type ="radio" id ="mc" name ="question1" value ="9"> 9
+        <input type ="radio" id ="mc" name ="question1" value ="1"> 1<br><br>
+        <button id="gatos_siguiente1" type="button" onclick ="gatosSiguiente1()">Siguiente</button>
+</form>
+</div>
+<div id="DIVgatos2">
+    <form name="trivia_gatos2">
+        <p>Pregunta: 2/4</p>
+        <p>¿Qué significa que tú minino te mire desde arriba? </p>
+        <input type ="radio" id ="mc" name ="question2" value ="Se cree tú dueño"> Se cree tú dueño
+        <input type ="radio" id ="mc" name ="question2" value ="Es un signo de dominancia"> Es un signo de dominancia
+        <input type ="radio" id ="mc" name ="question2" value ="Solo quiere descansar"> Solo quiere descansar
+        <input type ="radio" id ="mc" name ="question2" value ="Porque está triste"> Porque está triste<br><br>
+        <button id="gatos_siguiente2" type="button" onclick ="gatosSiguiente2()">Siguiente</button>
+    </form>
+</div>
+<div id="DIVgatos3">
+    <form name="trivia_gatos3">
+        <p>Pregunta: 3/4</p>
+        <p>¿Por qué maullan los gatos?</p>
+        <input type ="radio" id ="mc" name ="question3" value ="Para comunicarse con las personas"> Para comunicarse con las personas
+        <input type ="radio" id ="mc" name ="question3" value ="Para hablar con el perro"> Para hablar con el perro
+        <input type ="radio" id ="mc" name ="question3" value ="Para perdir comida"> Para pedir comida
+        <input type ="radio" id ="mc" name ="question3" value ="Solo quiere molestar"> Solo quiere molestar<br><br>
+        <button id="gatos_siguiente3" type="button" onclick ="gatosSiguiente3()">Siguiente</button>
+    </form>
+</div>
+<div id="DIVgatos4">
+    <form name="trivia_gatos4">
+        <p>Pregunta: 4/4</p>
+        <p>¿Por qué te traen animales muertos?</p>
+        <input type ="radio" id ="mc" name ="question4" value ="Para coleccionarlos"> Para coleccionarlos
+        <input type ="radio" id ="mc" name ="question4" value ="Como regalo"> Como regalo
+        <input type ="radio" id ="mc" name ="question4" value ="Por que me odia"> Porque me odia
+        <input type ="radio" id ="mc" name ="question4" value ="Por que tiene hambre"> Porque tiene hambre<br><br>
+        <input id = "button" type = "button" value= "Terminé Miau" onclick = "cat();">
+    </form>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
